@@ -1,51 +1,41 @@
-
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import About from './components/About.js';
+import Contact from './components/Contact.js';
 
 
-
- 
-  
   function App() {
     return (
+      <Router>
       <div className="App">
         {/* Header Section */}
         <header className="App-header">
-          <h1>Welcome to My Website</h1>
+          <h1>Jon Gibbs: Greater Lynwood area Private Tutor</h1>
         
           <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
           </nav> 
-          <img className="profile-image" src="/profile.jpeg" alt="me" /> 
+          <img className="profile-image" src="/images/profile.jpeg" alt="me" /> 
         </header>
   
         {/* Main Content Section */}
-        <main>
-          <section id="home">
-            <h2>Home</h2>
-            <p>This is the homepage of my simple React website. Feel free to explore!</p>
-          </section>
-          <section id="about">
-            <h2>About</h2>
-            <p>This section provides information about me and the website.</p>
-          </section>
-          <section id="services">
-            <h2>Services</h2>
-            <p>Here are some of the services I offer.</p>
-          </section>
-          <section id="contact">
-            <h2>Contact</h2>
-            <p>You can contact me through the following methods.</p>
-          </section>
+        <main className = "main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
         </main>
   
         {/* Footer Section */}
         <footer>
-          <p>&copy; 2024 My Simple Website</p>
+          <p>&copy; 2024 Jon Gibbs website</p>
         </footer>
       </div>
+      </Router>
     );
   }
   

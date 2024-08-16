@@ -58,6 +58,9 @@ body {
   border-radius: 50%; /* Optional: This makes the image circular */
   object-fit: cover; /* Ensures the image covers the entire area */
 }
+.main-content{
+  
+}
 
 nav {
   margin: 20px 0;
@@ -83,7 +86,7 @@ section {
 }
 
 footer {
-  background-color: #9c1515;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
