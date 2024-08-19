@@ -11,11 +11,11 @@ import Contact from './components/Contact.js';
       <div className="App">
         {/* Header Section */}
         <header className="App-header">
-          <h1>Jon Gibbs: Greater Lynwood area Private Tutor</h1>
+          <h1>Jon Gibbs: Lynwood area Private Math Tutor</h1>
         
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/">Who I Am</Link>
+            <Link to="/about">How I Tutor</Link>
             <Link to="/contact">Contact</Link>
           </nav> 
           <img className="profile-image" src="/images/profile.jpeg" alt="me" /> 
@@ -23,11 +23,17 @@ import Contact from './components/Contact.js';
   
         {/* Main Content Section */}
         <main className = "main-content">
+          <div className = "main-contentTextBox">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          </div>
+          <div className="mainContentImage">
+    <img src="/images/math-stock-photo.jpg" alt="math" />
+    <div className="image-gradient"></div> 
+  </div>
         </main>
   
         {/* Footer Section */}
