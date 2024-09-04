@@ -36,6 +36,8 @@
     transform: rotate(360deg);
   }
 } */
+/* Basic reset */
+
 .App {
   display: flex;
   flex-direction: column;
@@ -140,3 +142,159 @@ footer {
   width: 100%;
   bottom: 0;
 }
+
+@media(max-width: 1000px){
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Image */
+.profile-image {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.main-contentTextBox {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mainContentImage {
+  position: relative;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.mainContentImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+/* Footer */
+footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+  .App-header  {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    font-size: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .profile-image {
+  max-width: auto;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .main-contentTextBox {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .mainContentImage img {
+   display: none;
+  }
+
+  .nav-toggle {
+    background-color: #282c34;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links.open {
+    display: block;
+  }
+  
+  
+    .nav-toggle {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-links.open {
+      display: block;
+    }
+  
+}
+}
+
